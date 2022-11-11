@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+    
+    <form>
+        <fieldset>
+        <legend>Formulário de Aluno</legend>
+         <h1>Inscreva-se!</h1>
+         <label>Nome</label><br>
+          <input type="text"><br><br>
+         <label>Sobrenome</label><br>
+          <input type="text"><br><br>
+         <label>Email</label><br>
+          <input type="email" id="email"><br><br>
+         <label>Senha</label><br>
+          <input type="password"  id="senha"><br><br>
+          <input type="checkbox"> <span> Junte-se á nós!</span><br><br>
+          <input type="submit" onclick="logar(); return false"><br><br>
+
+          <a href="">Já faz parte? Faça o login</a>
+          <p>Obrigado pelo envio!</p>
+         
+        </fieldset>
+    </form>
+</body>
+
+<script>
+    function logar(){
+        var email = document.getElementById('email').value;
+        var senha = document.getElementById('senha').value;
+
+        if(email == "Aluno@gmail.com" && senha == "Aluno"){
+        alert('Sucesso');
+        location.href="test.html";
+    }else{
+        alert("Email o senha incorreta")
+    }
+    alert.className = "sucesso"
+        
+    }
+    
+</script>
+</html>
